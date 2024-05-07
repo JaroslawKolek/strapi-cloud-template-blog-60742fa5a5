@@ -9,8 +9,8 @@ export interface BasicButton extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    href: Attribute.String & Attribute.DefaultTo<'#009834'>;
-    color_hex: Attribute.String;
+    href: Attribute.String;
+    color_hex: Attribute.String & Attribute.DefaultTo<'#009834'>;
     icon: Attribute.Media;
   };
 }
