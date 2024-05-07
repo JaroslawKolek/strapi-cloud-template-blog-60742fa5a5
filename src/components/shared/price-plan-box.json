@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_price_plan_boxes",
+  "info": {
+    "displayName": "Price Plan Box"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "gb_amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "gb_amount_fup": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

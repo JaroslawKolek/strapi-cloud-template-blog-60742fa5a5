@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "job_pages",
+  "info": {
+    "singularName": "job-page",
+    "pluralName": "job-pages",
+    "displayName": "Job Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "boxes_description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.box-with-background-image"
+    },
+    "defaultSeo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
