@@ -9,9 +9,9 @@ export interface BasicButton extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    icon: Attribute.Component<'shared.icon'>;
     href: Attribute.String & Attribute.DefaultTo<'#009834'>;
     color_hex: Attribute.String;
+    icon: Attribute.Media;
   };
 }
 
@@ -41,6 +41,18 @@ export interface SharedIcon extends Schema.Component {
   };
 }
 
+export interface SharedInformationBox extends Schema.Component {
+  collectionName: 'components_shared_information_boxes';
+  info: {
+    displayName: 'Information Box';
+  };
+  attributes: {
+    title: Attribute.String;
+    body: Attribute.RichText;
+    actions: Attribute.Component<'basic.button', true>;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -56,12 +68,14 @@ export interface SharedPricePlanBox extends Schema.Component {
   collectionName: 'components_shared_price_plan_boxes';
   info: {
     displayName: 'Price Plan Box';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required & Attribute.Unique;
     gb_amount: Attribute.Decimal & Attribute.Required;
     gb_amount_fup: Attribute.Decimal;
     price: Attribute.Decimal & Attribute.Required;
+    action: Attribute.Component<'basic.button'>;
   };
 }
 
@@ -122,6 +136,7 @@ declare module '@strapi/types' {
       'basic.button': BasicButton;
       'shared.box-with-background-image': SharedBoxWithBackgroundImage;
       'shared.icon': SharedIcon;
+      'shared.information-box': SharedInformationBox;
       'shared.media': SharedMedia;
       'shared.price-plan-box': SharedPricePlanBox;
       'shared.quote': SharedQuote;

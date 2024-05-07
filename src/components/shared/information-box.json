@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_information_boxes",
+  "info": {
+    "displayName": "Information Box"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "actions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.button"
+    }
+  }
+}
