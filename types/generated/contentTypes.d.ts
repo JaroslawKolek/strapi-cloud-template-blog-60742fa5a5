@@ -961,6 +961,13 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     favicon: Attribute.Media;
     siteDescription: Attribute.Text & Attribute.Required;
     defaultSeo: Attribute.Component<'shared.seo'>;
+    dynamic: Attribute.DynamicZone<
+      [
+        'shared.information-box',
+        'shared.price-plan-box',
+        'shared.box-with-background-image'
+      ]
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
